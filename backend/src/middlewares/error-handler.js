@@ -1,4 +1,4 @@
-const logger = require('../config/logger')
+const logger = require('../config/logger');
 
 const errorHandler = (err, req, res, next) => {
     logger.error('Error', {
@@ -14,3 +14,5 @@ const errorHandler = (err, req, res, next) => {
         message: statusCode === 500 ? 'Internal Server Error' : err.message 
     });
 };
+
+module.exports = errorHandler;
